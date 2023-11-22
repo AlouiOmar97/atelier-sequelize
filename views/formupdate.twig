@@ -1,0 +1,13 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <h1>{{title}}</h1>
+  <p>Welcome to {{title}}</p>
+  <div>
+  <form action="/forms/update/{{comment.id}}" method="POST" >
+  <label for="title">Add a comment</label>
+  <input type="text" id="title" name="title" placeholder="Add a comment" value="{{comment.title}}" />
+  <input type="submit" value="Save" />
+  </form>
+  </div>
+{% endblock %}
